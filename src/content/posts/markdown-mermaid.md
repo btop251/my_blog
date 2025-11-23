@@ -189,4 +189,4 @@ Mermaid is a powerful tool for creating various types of diagrams in Markdown do
 
 To use Mermaid, simply specify the mermaid language in a code block and describe the diagram using concise text syntax. Mermaid will automatically convert these descriptions into beautiful visual diagrams.
 
-Try using Mermaid diagrams in your next technical blog post or project documentation - they will make your content more professional and easier to understand!
+xxxxxxxxxx The content :spoiler[is hidden **ayyy**]!​markdown
