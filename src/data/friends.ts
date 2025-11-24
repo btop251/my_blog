@@ -63,11 +63,11 @@ export const friendsData: FriendItem[] = [
 	},
 	{
 		id: 7,
-		title: "GitHub",
-		imgurl: "https://avatars.githubusercontent.com/u/9919?v=4&s=640",
-		desc: "Where the world builds software",
-		siteurl: "https://github.com",
-		tags: ["Development", "Platform"],
+		title: "xiaochai_123",
+		imgurl: "https://xiaochai-123.github.io/images/my-avatar.jpg",
+		desc: "25届web手；小工具爱好者 | CTF新人 | CS学生（自称）",
+		siteurl: "https://xiaochai-123.github.io/",
+		tags: ["web", "aurora"],
 	},
 	{
 		id: 8,

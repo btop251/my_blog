@@ -6,6 +6,7 @@ This website is built with the **Astro** framework using the [Mizuki](https://gi
 ## 🌟 Theme Features
 
 ### 🎨 Design & User Experience
+
 - **Modern & Elegant Design** - Clean, minimalist interface with beautiful typography
 - **Fully Responsive** - Optimized for all devices from mobile to desktop
 - **Dark/Light Mode** - Automatic theme switching with smooth transitions

@@ -1,5 +1,5 @@
 ---
-title: sqlite盲注
+title: 2025极客大挑战 Sequal No Uta
 published: 2025-11-24
 pinned: false
 description: 通过2025极客大挑战的题了解sqlite盲注.
