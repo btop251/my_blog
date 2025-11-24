@@ -49,7 +49,7 @@ export const siteConfig: SiteConfig = {
 	// 顶栏标题配置
 	navbarTitle: {
 		// 顶栏标题文本
-		text: "晓堃的小栈",
+		text: "晓堃の小栈",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.png
 		icon: "assets/home/home.png",
 	},
@@ -135,7 +135,7 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			title: "晓堃的博客", // 主页横幅主标题
+			title: "晓堃の博客", // 主页横幅主标题
 
 			subtitle: [
 				"特別なことはないけど、君がいると十分です",
