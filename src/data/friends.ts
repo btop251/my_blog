@@ -17,7 +17,7 @@ export const friendsData: FriendItem[] = [
 		title: "leyi",
 		imgurl: "https://leyi.live/img/head.jpg",
 		desc: "25届web手",
-		siteurl: "https://github.com/withastro/astro",
+		siteurl: "https://leyi.live",
 		tags: ["web" ,"aurora"],
 	},
 	{
