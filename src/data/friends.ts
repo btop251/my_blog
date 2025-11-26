@@ -77,6 +77,14 @@ export const friendsData: FriendItem[] = [
 		siteurl: "https://hasegawaazusa.github.io/",
 		tags: ["crypto", "misc"],
 	},
+	{
+		id: 9,
+		title: "266IO",
+		imgurl: "https://hasegawaazusa.github.io/images/android-chrome-144x144.png",
+		desc: "25届re手，逆向大手子，喜欢猫猫",
+		siteurl: "https://cat26610.github.io/images/avatar.jpg",
+		tags: ["crypto", "misc"],
+	},
 ];
 
 // 获取所有友情链接数据
