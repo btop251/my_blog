@@ -104,7 +104,7 @@ export const friendsData: FriendItem[] = [
 	{
 		id: 12,
 		title: "marin",
-		imgurl: "./assets/images/marin.jpg",
+		imgurl: "https://raw.githubusercontent.com/btop251/my_blog/refs/heads/main/src/assets/images/marin.jpg",
 		desc: "misc兼web大手子，强得可怕",
 		siteurl: "https://wwwmarin.xyz/#",
 		tags: ["misc", "web", "aurora"],
