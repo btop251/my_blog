@@ -80,10 +80,18 @@ export const friendsData: FriendItem[] = [
 	{
 		id: 9,
 		title: "266IO",
-		imgurl: "https://hasegawaazusa.github.io/images/android-chrome-144x144.png",
+		imgurl: "https://cat26610.github.io/images/avatar.jpg",
 		desc: "25届re手，逆向大手子，喜欢猫猫",
-		siteurl: "https://cat26610.github.io/images/avatar.jpg",
-		tags: ["crypto", "misc"],
+		siteurl: "https://cat26610.github.io",
+		tags: ["re", "aurora"],
+	},
+	{
+		id: 10,
+		title: "rinne",
+		imgurl: "https://www.rinne.in/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F180847792%3Fv%3D4&w=384&q=75",
+		desc: "25届web手，开发大佬，很强",
+		siteurl: "https://www.rinne.in/",
+		tags: ["web", "aurora"],
 	},
 ];
 
