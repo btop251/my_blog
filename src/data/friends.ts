@@ -83,7 +83,7 @@ export const friendsData: FriendItem[] = [
 		imgurl: "https://cat26610.github.io/images/avatar.jpg",
 		desc: "25届re手，逆向大手子，喜欢猫猫",
 		siteurl: "https://cat26610.github.io",
-		tags: ["re", "aurora"],
+		tags: ["Reverse", "aurora"],
 	},
 	{
 		id: 10,
@@ -92,6 +92,22 @@ export const friendsData: FriendItem[] = [
 		desc: "25届web手，开发大佬，很强",
 		siteurl: "https://www.rinne.in/",
 		tags: ["web", "aurora"],
+	},
+	{
+		id: 11,
+		title: "9C±Void",
+		imgurl: "https://cauliweak9.github.io/img/head.jpg",
+		desc: "9C神",
+		siteurl: "https://cauliweak9.github.io",
+		tags: ["misc", "Blockchain", "aurora"],
+	},
+	{
+		id: 12,
+		title: "marin",
+		imgurl: "./assets/images/marin.jpg",
+		desc: "misc兼web大手子，强得可怕",
+		siteurl: "https://wwwmarin.xyz/#",
+		tags: ["misc", "web", "aurora"],
 	},
 ];
 
