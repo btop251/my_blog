@@ -511,7 +511,7 @@ find / -perm -4000 -type f 2>/dev/null | grep -vE "/proc|/sys"
 
 以我们学校新生赛的一道ssti为例
 
-![image-20251125223751454](.\assets\image-20251125223751454.png)
+![image-20251125223751454](./assets/image-20251125223751454.png)
 
 上传{{7*7}}的base64编码
 
@@ -521,11 +521,11 @@ e3s3Kjd9fQ==
 
 回显49，存在ssti漏洞
 
-![image-20251125224251895](.\assets\image-20251125224251895.png)
+![image-20251125224251895](./assets/image-20251125224251895.png)
 
 抓包，表单是`quote`
 
-![image-20251125225953027](.\assets\image-20251125225953027.png)
+![image-20251125225953027](./assets/image-20251125225953027.png)
 
 在kali下载fenjing，输入指令
 
@@ -535,7 +535,7 @@ python -m fenjing crack --url 'http://node.szu.moe:10296/' --method POST --input
 
 爆破成功后就可以执行命令了
 
-![image-20251125230314736](.\assets\image-20251125230314736.png)
+![image-20251125230314736](./assets/image-20251125230314736.png)
 
 然后就可以执行命令了
 
@@ -553,7 +553,7 @@ cat /flag
 env
 ```
 
-![image-20251125230542004](.\assets\image-20251125230542004.png)
+![image-20251125230542004](./assets/image-20251125230542004.png)
 
 找到flag
 
