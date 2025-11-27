@@ -2,7 +2,7 @@
 title:  fenjing(焚靖) 
 published: 2025-11-25
 pinned: false
-description: 通过2025极客大挑战回顾或学习了一些php反序列化的知识点.
+description: ssti最严厉的父亲.
 tags: [CTF, ssti, game, 工具]
 category: CTF
 draft: false
